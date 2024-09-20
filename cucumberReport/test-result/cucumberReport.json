@@ -1,0 +1,139 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "load-testing-api-endpoints;perform-load-test-with-different-credentials-and-parameters",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Perform load test with different credentials and parameters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 34441200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I have the API with base URL \"https://example.com/api\" and HTTP method \"POST\"",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I have the credentials with username \"testUser1\" and password \"testPass1\"",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I set the request headers \"Content-Type\" as \"application/json\"",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I perform a load test with 10 virtual users for 1 minutes",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5013796899,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the response status should be 200 for all users",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:116"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the response time should be less than 500ms for all users",
+            "match": {
+              "location": "Cucumber\\steps\\loadtest.ts:120"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 17681899,
+              "error_message": "Error: The pact mock service wasn't running when verify was called\n    at Pact.verify (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\node_modules\\@pact-foundation\\src\\httpPact\\index.ts:196:9)\n    at World.<anonymous> (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\loadtest.ts:127:16)\n    at C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\loadtest.ts:8:71\n    at __awaiter (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\loadtest.ts:4:12)\n    at World.<anonymous> (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\loadtest.ts:127:12)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 860699,
+              "error_message": "Error: Error in native callback\n    at mockServerMismatches (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\node_modules\\@pact-foundation\\pact-core\\src\\consumer\\internals.ts:10:9)\n    at Object.mockServerMismatches (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\node_modules\\@pact-foundation\\pact-core\\src\\consumer\\index.ts:125:27)\n    at Pact.verify (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\node_modules\\@pact-foundation\\src\\httpPact\\index.ts:200:39)\n    at World.<anonymous> (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\contrace.ts:18:18)\n    at C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\contrace.ts:8:71\n    at __awaiter (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\contrace.ts:4:12)\n    at World.<anonymous> (C:\\Users\\Bhuvanesh.p\\Pictures\\New\\Cucumber\\steps\\contrace.ts:31:12)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@k6load",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "load-testing-api-endpoints",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Load Testing API Endpoints",
+    "tags": [
+      {
+        "name": "@k6load",
+        "line": 1
+      }
+    ],
+    "uri": "Cucumber\\feature\\loadtest.feature"
+  }
+]

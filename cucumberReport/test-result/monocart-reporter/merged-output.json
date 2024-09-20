@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "account-service-api;fetching-account-details",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Fetching account details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28046500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the account service is set up",
+            "match": {
+              "location": "Cucumber\\steps\\contrace.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 579899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "a request is made for account details with accountId 543535",
+            "match": {
+              "location": "Cucumber\\steps\\contrace.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27197299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the response should include account details with accountId 543535",
+            "match": {
+              "location": "Cucumber\\steps\\contrace.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3272699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contact",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "account-service-api",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "Account Service API",
+    "tags": [
+      {
+        "name": "@contact",
+        "line": 1
+      }
+    ],
+    "uri": "Cucumber\\feature\\contactfeature.feature",
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "120"
+      },
+      "device": "Local test machine",
+      "platform": {
+        "name": "ios",
+        "version": "16.04"
+      }
+    }
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "consumer": {
+    "name": "AccountServiceFrontend"
+  },
+  "interactions": [
+    {
+      "description": "a request for account details with accountId=1234322",
+      "providerState": "account exists",
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/accounts",
+        "query": "accountId=1234322"
+      },
+      "response": {
+        "body": {
+          "accountId": "1234322",
+          "accountName": "John Doe",
+          "balance": 1000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for account details with accountId=invalid",
+      "providerState": "account exists",
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/accounts",
+        "query": "accountId=invalid"
+      },
+      "response": {
+        "body": {
+          "accountId": "invalid",
+          "accountName": "John Doe",
+          "balance": 1000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "13.1.2"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "AccountServiceAPI"
+  }
+}

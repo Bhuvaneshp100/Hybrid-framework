@@ -1,0 +1,44 @@
+{
+  "name": "qa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dependencyInstall": "npm install -D @playwright/test && npx playwright install",
+    "cucumber": "cucumber-js --tags=@k6load",
+    "test": "playwright test",
+    "K6dependencyInstall": "winget install k6 --source winget",
+    "test:k6": "ts-node run-k6-scripts.js"
+  },
+  "keywords": [],
+  "author": "Bhuvanesh",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "@playwright/test": "^1.44.1",
+    "@types/k6": "^0.53.1",
+    "@types/node": "^20.14.2",
+    "@types/node-fetch": "^2.6.11",
+    "allure-playwright": "3.0.0-beta.3",
+    "cucumber-html-report": "^0.6.5",
+    "cucumber-html-reporter": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "k6": "^0.0.0",
+    "k6-html-reporter": "^1.0.5",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "playwright": "^1.44.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@pact-foundation/pact": "^13.1.2",
+    "@types/chai": "^4.3.19",
+    "chai": "^4.3.6",
+    "monocart-reporter": "^2.4.9",
+    "node-fetch": "^2.7.0",
+    "pact": "^4.3.2",
+    "ts-node": "^10.0.0",
+     "@cucumber/cucumber": "7.0.0"
+
+  }
+}

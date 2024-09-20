@@ -1,0 +1,20 @@
+{
+    "default": {
+           
+        "paths": ["Cucumber/feature/*.feature"],
+        "require": ["Cucumber/steps/**/*.ts"],
+        "requireModule": ["ts-node/register"],
+        
+        "formatOptions": {
+            "snippetInterface": "async-await"
+          },
+        "format": [
+             "html:cucumberReport/test-result/cucumberReport.html",
+             "json:cucumberReport/test-result/cucumberReport.json" 
+        ]
+      
+    }
+      
+    
+    
+}

@@ -1,0 +1,91 @@
+{
+  "consumer": {
+    "name": "ConsumerName"
+  },
+  "interactions": [
+    {
+      "description": "a request for account details with accountId=12345",
+      "providerState": "account exists",
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/accounts",
+        "query": "accountId=12345"
+      },
+      "response": {
+        "body": {
+          "accountId": "12345",
+          "accountName": "John Doe",
+          "balance": 1000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for account details with accountId=543533",
+      "providerState": "account exists",
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/accounts",
+        "query": "accountId=543533"
+      },
+      "response": {
+        "body": {
+          "accountId": "543533",
+          "accountName": "John Doe",
+          "balance": 1000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for account details with accountId=999999",
+      "providerState": "account exists",
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/accounts",
+        "query": "accountId=999999"
+      },
+      "response": {
+        "body": {
+          "accountId": "999999",
+          "accountName": "John Doe",
+          "balance": 1000
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "13.1.2"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "ProviderName"
+  }
+}

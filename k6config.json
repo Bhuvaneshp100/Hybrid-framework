@@ -1,0 +1,6 @@
+{
+    "scriptPath": "./K6 performance/script.js",
+    "jsonOutputPath": "./results.json",
+    "htmlReportPath": "./report.html"
+  }
+  
